@@ -46,3 +46,12 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/[
 
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+
+# Show with special format
+alias dformat="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}'"
+
+# Get containers by exact image/parent-image name
+dpsi() { docker ps --filter "ancestor=$1"; }
+
+# Get containers even exited by exact image/parent-image name
+dpsai() { docker ps -a --filter "ancestor=$1"; }
