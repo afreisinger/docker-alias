@@ -2,7 +2,8 @@
 # Docker alias and function
 # ------------------------------------
 
-dhelp() {
+function dhelp() 
+{
     echo "dalias=Show all related docker"
     echo "dbash=Bash into running container"
     echo "dbu=Dockerfile build, e.g., $dbu tcnksm/test "
@@ -20,6 +21,7 @@ dhelp() {
     echo "drmf=Stop and Remove all containers"
     echo "drmsc=Remove all exited containers"
     echo "dstop=Stop all containers"
+
 }
 
 
