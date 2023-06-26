@@ -28,6 +28,13 @@ function dhelp()
 # Get latest container ID
 alias dl="docker ps -l -q"
 
+# Get version
+alias dve="docker -v"
+
+# login
+alias dlo="docker login --username=afreisinger"
+
+
 # Get container process
 alias dps="docker ps"
 
